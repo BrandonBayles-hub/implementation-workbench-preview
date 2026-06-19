@@ -171,3 +171,21 @@ https://www.loom.com/share/cf081d16544a4a3fb1de01aa7f5b0012
 | Signal intake | `audit/SC-E001/signal-intake.md` |
 | ROI analysis | `runs/ssp-v2-property-implementations/roi-analysis.md` |
 | Engineering Prompt | `core--product-copy/_handoff/DEV-304238/ENGINEERING-PROMPT.md` |
+
+---
+
+## 11. Vertical Impact
+
+This feature ships in the Entrata `core` product under Setup > Property Implementations. Vertical impact assessment:
+
+| Vertical | Required? | Type | Summary | Notes |
+|----------|-----------|------|---------|-------|
+| Residential | Yes | Full | Primary target — all conventional multifamily implementations use SSP workflow | No deviations from standard implementation |
+| Commercial | Yes | Full | Commercial properties use SSP workflow for contract adds | Configuration Type options include commercial-relevant types (e.g., New Construction) |
+| Affordable | Yes | Full | Affordable properties use SSP workflow | No deviations; migration fields apply equally |
+| Student | Yes | Full | Student housing implementations use SSP | No deviations; same workflow |
+| Military | Yes | Full | Military housing uses SSP | No deviations |
+| Senior | Yes | Full | Senior housing uses SSP | No deviations |
+| HOA | Partial | Limited | HOA properties may use SSP depending on contract structure | Engineering to confirm HOA property type visibility in dropdown |
+
+**Scope guard:** No vertical-specific logic is introduced in v1 — this is a nav and form enhancement that applies uniformly across all verticals that use the SSP add-property workflow.
